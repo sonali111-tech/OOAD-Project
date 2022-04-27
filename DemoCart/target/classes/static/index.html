@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Cart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="app/styles/main.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="demoApp">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="header">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#js-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand">Shopping Cart<span class="glyphicon icon-shopping-bag"></span></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/shoppingcart/#!/Home">Products</a></li>
+                    <li class="active"><a href="/shoppingcart/#!/Cart">Cart</a></li>
+                    <li class="active"><a href="/shoppingcart/#!/History">History</a></li>
+                    <!--<li><a ng-href="#/about">About</a></li>-->
+                    <!--<li><a ng-href="#/">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div ng-view=""></div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p><span class="glyphicon glyphicon-eye-open"></span> Design b Demo</p>
+    </div>
+</div>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    !function (A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="bower_components/angular/angular.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js" integrity="sha512-klc+qN5PPscoGxSzFpetVsCr9sryi2e2vHwZKq43FdFyhSAa7vAqog/Ifl8tzg/8mBZiG2MAKhyjH5oPJp65EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+
+<!-- <script src="bower_components/angular-animate/angular-animate.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.js" integrity="sha512-yDoMcZl9LGGR5U/gkySLy1mEGb9pJrA2FhUIzpcSGNTXVx1iQ3JZZv+Q5ihOul7DEDosNP1hl4D71cqyzyXVjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="bower_components/angular-cookies/angular-cookies.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.8.3/angular-cookies.js" integrity="sha512-ZHJPZdtNy97ocWvmz1mp86vw2LIDczWf48WITpd+Z/jJQszhUURAmeV4LFxPwxyTt1ZcetHg1t5YubeYpti72Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="bower_components/angular-resource/angular-resource.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.8.3/angular-resource.js" integrity="sha512-HdD+nFlaO+1v1J/2lkX/tTAO4/xPrtx8mItmkkpXm48pRzQPMFfBof+clPLBaWdJBD5Qf8x+geQgMFUr5edyiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.js" integrity="sha512-tfrAMEcgRMbx1MeQrt2H/TrwaKG+m0ngUQ7R+hM9ZLD3SbwAvXsL1p0DwbTwv05EfES22HtfIged4iuHqmWYsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="bower_components/angular-sanitize/angular-sanitize.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.3/angular-sanitize.js" integrity="sha512-WsrQol2t85bun8XdIkjqTbNLgY54bCBgVZw+B+00eVritDAlCAcfYo92/53rFp63cKZpDa7t5r5lDDeKFcbUAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="bower_components/angular-touch/angular-touch.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.8.3/angular-touch.js" integrity="sha512-xKA7j41lCpsk/yzGeRkHUrhoAmuk+itJVQEofzsE15NeF3G77FaORcDg/3ZZs+WOWycYvJgTOxftQ1+5E4epHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="app/scripts/app.js"></script>
+<script src="app/scripts/controllers/main.js"></script>
+<script src="app/scripts/controllers/cart.js"></script>
+<script src="app/scripts/controllers/history.js"></script>
+<script src="app/scripts/controllers/login.js"></script>
+<!-- endbuild -->
+</body>
+</html>
